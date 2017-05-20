@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>My Slides</title>
+  <link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="resources/img/favicon.ico" type="image/x-icon">
+
+  <!-- CDN IMPORTS -->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- LOCAL IMPORTS -->
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
+  <!-- Javascript -->
+  <script src="resources/js/javascript.js"></script>
+  <script src="resources/js/anime-master/anime.min.js"></script>
+
+
+
+</head>
+<body>
+  <main>
+    <div class="container-fluid">
+      <!-- First Slide -->
+      <article class="article intro" id="article_0">
+        <!-- Cover -->
+        <div id="screen-cover">
+        </div>
+        <div id="screen-cover2">
+        </div>
+        <div class="row height-100">
+          <div class="col-sm-12 height-100 video-container">
+            <!-- Nav -->
+            <div id="nav-bar">
+              <div class="nav-content">
+                <ul class="nav-links">
+                  <li class="nav-link-item">
+                    <a href="www.example.com">Perks At Work</a>
+                  </li>
+                  <li class="nav-link-item">
+                    <a href="www.example.com">Our Culture</a>
+                  </li>
+                  <li class="nav-link-item">
+                    <a href="www.example.com">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Video -->
+            <video autoplay="" loop="" muted="" poster="" id="video-bg">
+              <source type="video/webm" src="http://www.nextjump.com/wp-content/uploads/2016/08/nxj_home_v2.webm"/>
+              <source type="video/mp4" src="http://www.nextjump.com/wp-content/uploads/2016/07/TRIM_1.mp4"/>
+            </video>
+            <!-- Title -->
+            <div id="intro-title" class="article-title">
+              <span class="title-subtext">A Company Dedicated To</span>
+              <span class="title-text">CHANGING WORKPLACE CULTURE</span>
+            </div>
+          </div>
+        </div>
+        <!-- Trending Topics -->
+        <div class="trending-topics">
+          <span class="trending-topics-header">TRENDING TOPICS</span>
+          <a href="https://perksatwork.nextjump.com/2017/04/10/why-do-we-lie-hide-and-fake/" onclick="trackTrendingLinkClick('No Lying, Hiding, Faking');">No Lying, Hiding, Faking</a>
+          <a href="http://www.nextjump.com/course/leading-your-organization/" onclick="trackTrendingLinkClick('The Moneyball of Leadership');">The Moneyball of Leadership</a>
+          <a href="https://perksatwork.nextjump.com/2017/05/05/next-jump-co-ceo-update-march-april/" onclick="trackTrendingLinkClick('Co-CEO Update');">Co-CEO Update</a>
+        </div>
+      </article>
+      <!-- Second Slide -->
+      <article class="article" id="article_1">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="article-title">This is my SECOND SLIDE</h2>
+          </div>
+        </div>
+      </article>
+      <!-- Third Slide -->
+      <article class="article" id="article_2">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="article-title">This is my THIRD SLIDE</h2>
+          </div>
+        </div>
+      </article>
+      <!-- Scroll BG -->
+      <div id="scrollBg">
+        <div id="lineDotsW"></div>
+        <img id="scrollIcon" src="resources/img/mouseScroll.svg" alt="scrollIcon">
+      </div>
+      <img id="upScrollArrow" src="resources/img/btnTouch1.svg">
+      <img id="downScrollArrow" src="resources/img/btnTouch2.svg">
+    </div>
+    <!-- Scroll to Top -->
+    <a href="#" class="scrollToTop hidden-xs">&nbsp;</a>
+  </main>
+</body>
+</html>
