@@ -19,10 +19,13 @@ $(document).ready(function() {
     decideSlideArrows();
   });
   coverAnimation();
+  //nxjAnimation();
+  logoAnimation();
   navAnimation();
   titleAnimation();
   trendingAnimation();
   console.log("Loaded!");
+  var logoTimeline = anime.timeline();
 });
 
 // Covers on page load
@@ -38,13 +41,124 @@ function coverAnimation() {
   // Slide grey cover up and fade out
   anime({
     targets: '#screen-cover2',
-    translateY: {value:(-view_h+80)+'px', duration:2000, delay: 800, easing:'easeOutExpo'},
+    translateY: {value:(-view_h+100)+'px', duration:2000, delay: 800, easing:'easeOutExpo'},
     opacity: {value:0.8, duration:1000, delay:1000},
     complete: function() {
       $("#screen-cover2").css("transform","none");
-      $("#screen-cover2").css("height","63px");
-      
+      $("#screen-cover2").css("display","none");
+      $("#nav-bar").css("background-color","#1f1f1f");
     }
+  });
+}
+
+// NXJ on page load
+function nxjAnimation() {
+  var logoEl = document.querySelector('.logo-animation');
+  var pathEls = document.querySelectorAll('.logo-animation path:not(.icon-curve)');
+  var innerWidth = window.innerWidth;
+  var maxWidth = 740;
+  var logoScale = innerWidth <= maxWidth ? innerWidth / maxWidth : 1;
+  var logoTimeline = anime.timeline();
+
+  logoEl.style.transform = 'translateY(50px) scale('+logoScale+')';
+
+  for (var i = 0; i < pathEls.length; i++) {
+    var el = pathEls[i];
+    el.setAttribute('stroke-dashoffset', anime.setDashoffset(el));
+  }
+
+  logoTimeline
+  .add({
+    targets: '.dot-e',
+    translateX: [
+    { value: [0,-83], duration: 520, delay: 200, easing: 'easeInQuart' },
+    { value: [-50, 0], duration: 500, delay: 1300, easing: 'easeOutQuart' }
+    ],
+    scale: [
+    { value: [0, 1], duration: 200, easing: 'easeOutBack' },
+    { value: 0, duration: 20, delay: 500, easing: 'easeInQuart' },
+    { value: 1, duration: 200, delay: 1300, easing: 'easeOutQuart' }
+    ],
+    offset: 0
+  })
+  .add({
+    targets: '.dot-j',
+    translateY: { value: [-200, 0], duration: 500, elasticity: 400 },
+    scale: [
+    { value: [0, 1], duration: 100, easing: 'easeOutQuart' }
+    ],
+    delay: 1200,
+    offset: 0
+  })
+  .add({
+    targets: '.fill.in',
+    strokeDashoffset: {
+      value: [anime.setDashoffset, 0],
+      duration: 800,
+      delay: function(el, i, t) { return 900 + ( i * 300 ); },
+      easing: 'easeOutQuart'
+    },
+    stroke: {
+      value: ['#FFF', function(el) { return anime.getValue(el.parentNode, 'stroke') } ],
+      duration: 500,
+      delay: 500,
+      easing: 'easeInQuad'
+    },
+    offset: 0
+  });
+}
+
+// Logo on page load
+function logoAnimation() {
+  var logoEl = document.querySelector('.logo-animation');
+  var pathEls = document.querySelectorAll('.logo-animation path:not(.icon-curve)');
+  var innerWidth = window.innerWidth;
+  var maxWidth = 740;
+  var logoScale = innerWidth <= maxWidth ? innerWidth / maxWidth : 1;
+  var logoTimeline = anime.timeline();
+
+  logoEl.style.transform = 'translateY(50px) scale('+logoScale+')';
+
+  for (var i = 0; i < pathEls.length; i++) {
+    var el = pathEls[i];
+    el.setAttribute('stroke-dashoffset', anime.setDashoffset(el));
+  }
+
+  logoTimeline
+  .add({
+    targets: '.dot-top',
+    translateY: { value: [-50, 0], duration: 500, elasticity: 400 },
+    scale: [
+    { value: [0, 1], duration: 100, easing: 'easeOutQuart' }
+    ],
+    delay: 3900,
+    offset: 0
+  })
+  .add({
+    targets: '.dot-end',
+    translateY: { value: [-20, 0], duration: 3000 },
+    scale: [
+    { value: [0, 1], duration: 100, easing: 'easeOutQuart' }
+    ],
+    delay: 3100,
+    offset: 0,
+    elasticity: 0
+  })
+  .add({
+    targets: '.fill.in',
+    strokeDashoffset: {
+      value: [anime.setDashoffset, 0],
+      duration: 1600,
+      delay: function(el, i, t) { return 2200 + ( i * 200 ); },
+      easing: 'easeOutQuart'
+    },
+    stroke: {
+      value: ['#FFF', function(el) { return anime.getValue(el.parentNode, 'stroke') } ],
+      duration: 500,
+      delay: 2000,
+      easing: 'easeInQuad'
+    },
+    offset: 0
   });
 }
 

@@ -97,6 +97,7 @@ article.article:hover .article-title
   left: 0;
   font-size: 16px;
   color: #fff;
+  opacity: 0.8;
   height: 80px;
   z-index: 12;
 }
@@ -286,6 +287,95 @@ article.article:hover .article-title
 }
 .scrollToTop:hover{
     text-decoration:none;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////
+// NxJ Animation NXJ
+//////////////////////////////////////////////////////////////////////////// */
+/*.logo-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin-top: -40px;
+}
+.letters {
+  position: relative;
+  display: flex;
+  width: 83px;
+  height: 62px;
+}
+.letter {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.letter:not(:first-child) {
+  margin-left: -10px;
+}
+.letter-j {
+  z-index: 1;
+  margin-left: -20px !important;
+  width: 20px;
+  height: 61px;
+  transform-origin: 100% 50%;
+}
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+}
+.dot-j {
+  top: -5px;
+  left: 60px;
+}
+.dot-e {
+  bottom: 28px;
+  right: 0;
+}*/
+
+/* ////////////////////////////////////////////////////////////////////////////
+// NxJ Animation ICON
+//////////////////////////////////////////////////////////////////////////// */
+.logo-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin-top: -50px;
+}
+.letters {
+  position: relative;
+  display: flex;
+  width: 61px;
+  height: 76px;
+}
+.letter {
+  position: relative;
+  width: 61px;
+  height: 61px;
+  margin-top: 15px;
+}
+.dot-top {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  transform: scale(0);
+}
+.dot-top {
+  top: 0;
+  left: 24px;
+}
+.dot-end {
+  position: absolute;
+  width: 10.5px;
+  height: 11px;
+  transform: scale(0);
+}
+.dot-end {
+  top: 50px;
+  left: 47px;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////
